@@ -1,5 +1,10 @@
-import termcolor
 import pyfiglet
+from termcolor import colored
 
-x = pyfiglet.figlet_format(input("Whats your name?: "))
-termcolor.cprint(x, "green") # remember to add the c to print
+
+msg = input("what do you want to print?: ")
+color = input("what color?: ")
+
+ascii_art = pyfiglet.figlet_format(msg)
+colored_ascii = colored(ascii_art, color=color)
+print(colored_ascii)
